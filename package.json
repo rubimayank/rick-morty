@@ -1,0 +1,112 @@
+{
+  "name": "rick-morty",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "run-s lint:js lint:prettier:check",
+    "lint:fix": "run-s lint:js:fix lint:prettier:fix",
+    "lint:prettier:check": "prettier --check \"**/*.{css,html,js,json,jsx,md,sass,scss,ts,tsx,vue,yaml,yml}\"",
+    "lint:prettier:fix": "prettier --write \"**/*.{css,html,js,json,jsx,md,sass,scss,ts,tsx,vue,yaml,yml}\"",
+    "lint:js": "run-s lint:js:prettier lint:js:eslint",
+    "lint:js:prettier": "prettier --check \"**/*.{json,js,ts,tsx,mjs}\"",
+    "lint:js:eslint": "eslint \"**/*.{js,ts,tsx,mjs}\"",
+    "lint:js:fix": "run-s lint:js:fix:prettier lint:js:fix:eslint",
+    "lint:js:fix:eslint": "npm run lint:js:eslint -- --fix",
+    "lint:js:fix:prettier": "prettier --write \"**/*.{json,js,ts,tsx,mjs}\"",
+    "commit": "git-cz",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "changelog:reset": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "prerelease": "run-s lint test",
+    "release-it": "release-it",
+    "release": "run-s \"release-it -- --ci --git.requireBranch=prod {1}\" --",
+    "release:canary": "run-s \"release-it -- {2} --preRelease={1} --ci\" -- "
+  },
+  "dependencies": {
+    "antd": "^4.16.9",
+    "append-query": "^2.1.1",
+    "next": "11.0.1",
+    "normalize.css": "^8.0.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "swr": "^0.5.6"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "@release-it/conventional-changelog": "^3.0.1",
+    "@types/append-query": "^2.0.1",
+    "@types/eslint": "^7.28.0",
+    "@types/eslint-plugin-prettier": "^3.1.0",
+    "@types/prettier": "^2.3.2",
+    "@types/react": "17.0.15",
+    "@types/react-dom": "^17.0.9",
+    "@typescript-eslint/eslint-plugin": "^4.28.5",
+    "commitiquette": "^1.1.1",
+    "commitizen": "^4.2.4",
+    "conventional-changelog-cli": "^2.1.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-next": "11.0.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jest": "^24.4.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-react": "^7.24.0",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.1.1",
+    "npm-run-all": "^4.1.5",
+    "post-merge-install": "^0.5.1",
+    "prettier": "^2.3.2",
+    "release-it": "^14.10.1",
+    "typescript": "4.3.5"
+  },
+  "license": "MIT",
+  "author": "Rubita",
+  "husky": {
+    "hooks": {
+      "post-merge": "post-merge-install",
+      "post-rebase": "post-merge-install",
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,ts,tsx,mjs}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "**/*.{json,css,html,md,sass,scss,vue,yaml,yml}": [
+      "prettier --write"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "commitiquette"
+    }
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "chore(release): v${version}",
+      "requireBranch": false
+    },
+    "github": {
+      "release": true
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "preset": "angular",
+        "infile": "CHANGELOG.md"
+      }
+    },
+    "npm": {
+      "publish": false
+    }
+  }
+}

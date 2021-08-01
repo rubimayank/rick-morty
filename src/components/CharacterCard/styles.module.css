@@ -1,0 +1,26 @@
+.card {
+  overflow: hidden;
+  border-radius: 8px;
+  padding: 0;
+  background-color: #fff;
+  padding: 16px;
+  display: grid;
+  column-gap: 16px;
+  grid-template-columns: 1fr;
+  max-width: 750px;
+  margin: auto;
+}
+
+@media only screen and (min-width: 500px) {
+  .card {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+.cover {
+  margin: auto;
+}
+
+.copy {
+  flex-grow: 1;
+}

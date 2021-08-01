@@ -1,0 +1,21 @@
+html,
+body {
+  font-family: Helvetica, Arial, Ubuntu, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 38px;
+}
+
+article h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}

@@ -1,0 +1,13 @@
+.wrapper {
+  margin: 8px 0;
+  height: 32px;
+}
+
+@media only screen and (max-width: 540px) {
+  .wrapper {
+    height: 64px;
+  }
+  .pagination > li:first-child {
+    display: block;
+  }
+}

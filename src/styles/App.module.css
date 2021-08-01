@@ -1,0 +1,18 @@
+.title {
+  color: #fff;
+  font-size: 28px;
+}
+
+.main {
+  color: inherit;
+}
+
+.header {
+  padding: 0 20px;
+}
+
+.content {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
