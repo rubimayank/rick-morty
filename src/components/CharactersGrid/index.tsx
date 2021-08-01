@@ -13,7 +13,6 @@ export default function CharactersGrid({
   characters?: Character[];
   loading: boolean;
 }): ReactElement {
-  console.log('loading', loading);
   if (loading) {
     return (
       <div className={styles.grid}>

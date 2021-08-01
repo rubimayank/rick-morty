@@ -22,7 +22,7 @@
     "changelog:reset": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "prerelease": "run-s lint test",
     "release-it": "release-it",
-    "release": "run-s \"release-it -- --ci --git.requireBranch=prod {1}\" --",
+    "release": "run-s \"release-it -- --ci --git.requireBranch=master {1}\" --",
     "release:canary": "run-s \"release-it -- {2} --preRelease={1} --ci\" -- "
   },
   "dependencies": {
