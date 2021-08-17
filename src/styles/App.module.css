@@ -1,18 +1,31 @@
 .title {
   color: #fff;
-  font-size: 28px;
+  font-size: 20px;
+  margin-right: 12px;
 }
 
 .main {
   color: inherit;
+  min-height: calc(100vh - 64px);
 }
 
 .header {
   padding: 0 20px;
+  display: flex;
 }
 
 .content {
-  max-width: 1600px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+.nav {
+  text-align: center;
+  margin: 8px 0;
+}
+
+.nav a {
+  margin-left: 8px;
+  font-size: 14px;
 }

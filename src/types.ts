@@ -43,7 +43,7 @@ export interface Character extends Resource {
 export interface Location extends Resource {
   name: string;
   type: string;
-  dimention: string;
+  dimension: string;
   residents: Array<Url>;
 }
 
@@ -68,6 +68,12 @@ export type Page<R> = {
   results?: Array<R>;
 };
 
+export type CharacterQuery = Partial<
+  Pick<Character, 'status' | 'species' | 'type' | 'gender' | 'name'>
+>;
+
 export type PageQuery<R> = Partial<R> & {
   page?: number | string;
 };
+
+export type FilterAction = (key: string, value?: string) => void;

@@ -19,3 +19,16 @@ article h1 {
   font-size: 28px;
   margin-bottom: 8px;
 }
+
+:root {
+  --color-blue: #096dd9;
+}
+
+.ant-btn-link:hover > span {
+  text-decoration: underline;
+}
+
+.ant-tag {
+  margin-right: 8px;
+  margin-bottom: 8px;
+}

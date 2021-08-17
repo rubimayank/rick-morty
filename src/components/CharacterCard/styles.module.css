@@ -11,14 +11,14 @@
   margin: auto;
 }
 
+.card[data-profile] {
+  margin-top: 20px;
+}
+
 @media only screen and (min-width: 500px) {
   .card {
     grid-template-columns: 1fr 2fr;
   }
-}
-
-.cover {
-  margin: auto;
 }
 
 .copy {
