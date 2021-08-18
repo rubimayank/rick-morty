@@ -14,20 +14,20 @@ function MyApp({ Component, pageProps }: AppProps): ReactElement {
     <Layout>
       <Header className={styles.header}>
         <Link href='/'>
-          <a className={styles.title}>Rick And Morty</a>
+          <a className={styles.title}>Rick &amp; Morty</a>
         </Link>
+        <nav className={styles.nav}>
+          <Link href='/'>
+            <a>Characters</a>
+          </Link>
+          <Link href='/locations'>
+            <a>Locations</a>
+          </Link>
+          <Link href='/episodes'>
+            <a>Episodes</a>
+          </Link>
+        </nav>
       </Header>
-      <nav className={styles.nav}>
-        <Link href='/'>
-          <a>Characters</a>
-        </Link>
-        <Link href='/locations'>
-          <a>Locations</a>
-        </Link>
-        <Link href='/episodes'>
-          <a>Episodes</a>
-        </Link>
-      </nav>
       <Content className={styles.main}>
         <div className={styles.content}>
           <Component {...pageProps} />

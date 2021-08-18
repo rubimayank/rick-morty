@@ -1,6 +1,6 @@
 .badge {
   margin-bottom: 8px;
-  display: inline-block;
+  display: inline-flex;
 }
 .badge > span:first-child {
   width: 8px;

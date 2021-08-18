@@ -38,9 +38,11 @@ export default function CharacterCard({
 }): ReactElement {
   return (
     <article>
-      <Head>
-        <title>{name}</title>
-      </Head>
+      {asProfile && (
+        <Head>
+          <title>{name}</title>
+        </Head>
+      )}
       <div className={styles.card} data-profile={asProfile || undefined}>
         <div>
           <Image
