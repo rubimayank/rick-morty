@@ -3,7 +3,7 @@
   "version": "0.2.0",
   "private": true,
   "scripts": {
-    "test": "echo no-test",
+    "test": "jest",
     "test:watch": "jest --watch",
     "dev": "next dev",
     "watch": "npm run dev",
