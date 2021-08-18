@@ -8,7 +8,7 @@ import NextError from 'next/error';
 import { Table } from 'antd';
 
 import { episodeApi } from '../../config';
-import { Page, Location, PageQuery, PaginationInfo, CharacterQuery } from '../../types';
+import { Page, Episode, PageQuery, PaginationInfo, CharacterQuery } from '../../types';
 import Error from '../../components/Error';
 import Pagination from '../../components/Pagination';
 
@@ -18,7 +18,7 @@ const columns = [
   {
     dataIndex: 'name',
     title: 'Name',
-    render: (name, { id }) => (
+    render: (name: string, { id }: Episode) => (
       <Link href={`/episodes/${id}`}>
         <a>{name}</a>
       </Link>
@@ -38,7 +38,7 @@ export default function Index(): ReactElement {
   const router = useRouter();
   const { query = {} } = router;
   const { page = '1' } = query as PageQuery<CharacterQuery>;
-  const { data, error } = useSWR<Page<Location>, Error>(appendQuery(episodeApi, query as Query));
+  const { data, error } = useSWR<Page<Episode>, Error>(appendQuery(episodeApi, query as Query));
   if (error) {
     // *Note -> In real app these error should be tracked
     // eslint-disable-next-line no-console

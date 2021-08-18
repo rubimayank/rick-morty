@@ -18,7 +18,7 @@ const columns = [
   {
     dataIndex: 'name',
     title: 'Name',
-    render: (name, { id }) => (
+    render: (name: string, { id }: Location) => (
       <Link href={`/locations/${id}`}>
         <a>{name}</a>
       </Link>

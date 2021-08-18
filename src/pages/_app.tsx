@@ -4,7 +4,7 @@ import 'antd/dist/antd.css';
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import Link from 'next/link';
-import { Layout, Breadcrumb } from 'antd';
+import { Layout } from 'antd';
 import styles from '../styles/App.module.css';
 
 const { Header, Content } = Layout;
