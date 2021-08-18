@@ -1,6 +1,7 @@
 module.exports = {
   env: {
-    browser: true,
+    'browser': true,
+    'jest/globals': true,
   },
   extends: [
     'eslint:recommended',
@@ -9,8 +10,10 @@ module.exports = {
     'plugin:prettier/recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:jest/recommended',
+    'plugin:jest/style',
   ],
-  plugins: ['eslint-comments', 'prettier', 'promise', '@typescript-eslint'],
+  plugins: ['eslint-comments', 'prettier', 'promise', '@typescript-eslint', 'jest'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 2019,
