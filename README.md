@@ -1,4 +1,5 @@
 # Ricky And Morty App
+
 This is a demo app built using [Next.js](https://nextjs.org/) and [Rick And Morty API](https://rickandmortyapi.com/).
 
 ## Getting Started
