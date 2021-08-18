@@ -7,7 +7,7 @@
     "test:watch": "jest --watch",
     "dev": "next dev",
     "watch": "npm run dev",
-    "prebuild": "npm-s typecheck lint",
+    "prebuild": "run-s typecheck lint",
     "build": "next build",
     "start": "next start",
     "typecheck": "tsc --noEmit",
