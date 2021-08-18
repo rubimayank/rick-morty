@@ -1,6 +1,8 @@
 # Ricky And Morty App
 
 This is a demo app built using [Next.js](https://nextjs.org/) and [Rick And Morty API](https://rickandmortyapi.com/).
+[![Lint](https://github.com/rubimayank/rick-morty/actions/workflows/lint.yml/badge.svg)](https://github.com/rubimayank/rick-morty/actions/workflows/lint.yml)
+[![Test](https://github.com/rubimayank/rick-morty/actions/workflows/npm-test.yml/badge.svg)](https://github.com/rubimayank/rick-morty/actions/workflows/npm-test.yml)
 
 ## Getting Started
 
