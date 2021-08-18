@@ -1,3 +1,10 @@
+## [0.3.3](https://github.com/rubimayank/rick-morty/compare/0.3.2...0.3.3) (2021-08-18)
+
+
+### Bug Fixes
+
+* fixes minor ui issues ([eda31de](https://github.com/rubimayank/rick-morty/commit/eda31de85543671c7831bf7c8139bf342cca9522))
+
 ## [0.3.2](https://github.com/rubimayank/rick-morty/compare/0.3.1...0.3.2) (2021-08-18)
 
 ## [0.3.1](https://github.com/rubimayank/rick-morty/compare/0.3.0...0.3.1) (2021-08-18)
