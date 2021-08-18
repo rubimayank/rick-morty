@@ -7,7 +7,7 @@
     "test:watch": "jest --watch",
     "dev": "next dev",
     "watch": "npm run dev",
-    "prebuild": "run-s typecheck lint",
+    "prebuild": "run-s typecheck lint test",
     "build": "next build",
     "start": "next start",
     "typecheck": "tsc --noEmit",
@@ -24,7 +24,7 @@
     "commit": "git-cz",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "changelog:reset": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
-    "prerelease": "run-s lint test",
+    "prerelease": "npm run build",
     "release-it": "release-it",
     "release": "run-s \"release-it -- --ci --git.requireBranch=master {1}\" --",
     "release:canary": "run-s \"release-it -- {2} --preRelease={1} --ci\" -- "
